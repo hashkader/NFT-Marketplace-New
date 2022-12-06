@@ -31,11 +31,13 @@ export const NFTProvider = ({ children }) => {
   const nftCurrency = 'ETH';
   const [currentAccount, setCurrentAccount] = useState('');
   const [isLoadingNFT, setIsLoadingNFT] = useState(false);
+  const ALCHEMY_API_KEY = "WykkX8hG8xZC-RMIdkEilHvdP_rj1jOL";
+  const url =  `https://eth-goerli.alchemyapi.io/v2/${ALCHEMY_API_KEY}`
 
   const fetchNFTs = async () => {
     setIsLoadingNFT(false);
 
-    const provider = new ethers.providers.JsonRpcProvider();
+    const provider = new ethers.providers.JsonRpcProvider(url);
     const contract = fetchContract(provider);
 
     const data = await contract.fetchMarketItems();

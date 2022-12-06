@@ -5,8 +5,8 @@ require('@nomiclabs/hardhat-waffle');
 
 const privateKey = fs.readFileSync('.secret').toString().trim();
 
-// // Go to https://www.alchemyapi.io, sign up, create
-// // a new App in its dashboard, and replace "KEY" with its key
+// Go to https://www.alchemyapi.io, sign up, create
+// a new App in its dashboard, and replace "KEY" with its key
 const ALCHEMY_API_KEY = "WykkX8hG8xZC-RMIdkEilHvdP_rj1jOL";
 
 // // Replace this private key with your Goerli account private key
